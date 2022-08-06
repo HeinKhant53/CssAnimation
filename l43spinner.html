@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>spinner</title>
+    <style type="text/css">
+        body{
+            height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: #1a1a1a;
+        }
+        .spinner{
+            width: 100px;
+            height: 100px;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 10px solid #ffff;
+            
+
+            animation: myspinner 2s linear infinite;
+        }
+        .spinner1{
+            border-top-color: steelblue;
+        }
+        .spinner2{
+            border-top-color: steelblue;
+            border-bottom-color: darkblue;
+        }
+        .spinner3{
+            border-top-color: steelblue;
+            border-bottom-color: darkblue;
+            border-left-color: cyan;
+        }
+        .spinner4{
+            border-top-color: steelblue;
+            border-bottom-color: darkblue;
+            border-left-color: cyan;
+            border-right-color: darkcyan;
+        }
+
+        @keyframes myspinner {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(1turn);
+            }
+
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="spinner spinner1"></div>
+    <div class="spinner spinner2"></div>
+    <div class="spinner spinner3"></div>
+    <div class="spinner spinner4"></div>
+
+    
+</body>
+</html>

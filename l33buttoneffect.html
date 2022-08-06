@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Button Effect</title>
+    <style type="text/css">
+        body{
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn{
+            background: linear-gradient(
+                200deg,
+                pink,
+                skyblue
+            );
+            font-size: 40px;
+            
+            border: none;
+            border-radius: 40px;
+
+            padding: 20px;
+
+            /* position: relative; */
+        }
+
+        .btn::after{
+            content: "10% OFF";
+
+            
+            font-size: 16px;
+            background-color: orange;
+            
+            /* border-radius: ; */
+            display: inline-block;  /*position: absolute; shit lo inline-block ma pay lay ya tal*/
+            padding: 5px;
+            margin-left: -55px;
+            margin-top: -30px;
+
+            border-radius: 25px;
+
+            position: absolute;
+            /* right: 0;
+            top: 0; */
+
+            transition: all .3s ease-out;
+        }
+
+        .btn:hover::after{
+            background-color: red;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" class="btn">Add to Card</button>
+</body>
+</html>

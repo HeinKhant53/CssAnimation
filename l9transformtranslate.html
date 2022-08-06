@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Transform Translate</title>
+
+    <style type="text/css">
+        .container{
+            width: 1000px;
+            background: grey;
+        }
+        .square{
+            width: 150px;
+            height: 60px;
+            background-color: red;
+            color: #fff;
+            font-size: 20px;
+
+            padding: 10px 0;
+            margin: 20px 0;
+
+            text-align: center;
+            line-height: 60px;
+        }
+        #translate:hover{
+            /* translate(x) */
+            transform: translate(200px);
+        }
+        #translatex:hover{
+            /* translateX(x) */
+            transform: translateX(300px);
+            /* transform: translateX(-100px); */
+            /* transform: translateX(100%); */
+            /* transform: translateX(-100%); */
+        }
+        #translatey:hover{
+            /* translateY(y) */
+            /* transform: translateY(300px); */
+            /* transform: translateY(-100px); */
+            transform: translateY(100%);
+            /* transform: translateY(-100%); */
+        }
+        #translatexy:hover{
+            /* translate(x,y) */
+            /* transform: translate(300px,0); */
+            /* transform: translate(-100px,300px); */
+            transform: translate(100%,50%);
+            /* transform: translate(-100%,-50%); */
+        }
+
+        img{
+            width: 300px;
+
+            display: block;
+            margin: 200px auto;
+
+            transition: transform 1s;
+        }
+
+        img:hover{
+            /* transform: translate(300px); */
+            /* transform: translate(100%); */
+            /* transform: translate(-500px); */
+            /* transform: translate(-30%); */
+
+            /* transform: translateX(300px); */
+
+            /* transform: translateY(300px); */
+
+            /* transform: translate(300px,200px);  */
+
+            transform: translateX(-100%) translateY(100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="square" id="translate">Translate Me</div>
+    </div>
+
+    <div class="container">
+        <div class="square" id="translatexy">Translate XY</div>
+    </div>
+
+    <div class="container">
+        <div class="square" id="translatex">Translate X</div>
+    </div>
+
+    <div class="container">
+        <div class="square" id="translatey">Translate Y</div>
+    </div>
+
+    <img src="./img/dog.jpg" alt="dog">
+</body>
+</html>

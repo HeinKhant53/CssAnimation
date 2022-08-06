@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>keyframe</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            width: 150px;
+            height: 150px;
+            background-color: steelblue;
+
+            /* animation-name: myani; */
+            animation-duration: 3s;
+            /* animation-fill-mode: backwards; -- > default */
+            /* animation-fill-mode: forwards; */
+
+            /* animation-delay: 3s; */
+        }
+
+        .box2{
+            width: 150px;
+            height: 150px;
+            background-color: orange;
+
+            /* animation-name: myrule;   */
+            animation-duration: 10s;
+
+            animation-fill-mode: forwards;
+        }
+
+        .box3{
+            width: 150px;
+            height: 150px;
+            background-color: pink; 
+
+            position: relative;
+
+            animation-name: myshake;
+            animation-duration: 5s;
+        }
+
+        @keyframes myani{
+            0%{
+                transform: translate(0px);
+            }
+            50%{
+                transform: translate(800px);
+            }
+            100%{
+                transform: translate(500px,800px);
+
+            }
+        } 
+
+        @keyframes myrule{
+            0%{
+                background-color: violet;
+                transform: translate(0);
+            }
+            25%{
+                background-color: orange;
+                transform: translateX(300px);
+            }
+            50%{
+                background-color: blue;
+                transform: translate(300px,300px);
+            }
+            75%{
+                background-color: green;
+                transform: translate(0,300px);
+            }
+            100%{
+                background-color: black;
+                transform: translate(0);
+            }
+        }
+
+        @keyframes myshake {
+            12.5%{
+                left: -100px;
+            }
+            25%{
+                left: 100px;
+            }
+            37.5%{
+                left: -50px;
+            }
+            50%{
+                left: 50px;
+            }
+            62.5%{
+                left: -25px;    
+            }
+            75%{
+                left: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <hr/>
+    <div class="box2"></div>
+    <hr/>
+    <div class="box3"></div>
+
+</body>
+</html>
